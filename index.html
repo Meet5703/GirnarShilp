@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Girnar Shilp</title>
+    <style>
+
+        #work .grid:hover img {
+            transition: all 0.3s ease;
+        }
+        
+        #work .grid:hover img:hover {
+            transform: scale(1.1);
+            filter: brightness(80%);
+            z-index: 1;
+            cursor: pointer;
+        }
+        
+        #work .grid:hover img:not(:hover) {
+            transform: scale(0.9);
+            filter: brightness(50%);
+        }
+
+        .navlist {
+            display: none;
+            background-color: black;
+        }
+
+        #menu-toggle:checked + label #menu-icon {
+            display: none;
+        }
+
+        #menu-toggle:checked + label #close-icon {
+            display: block;
+        }
+
+        #menu-toggle:checked ~ .navlist {
+            display: block;
+        }
+
+        .typing-text {
+            width: 10ch;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid #000;
+            animation: typing 6s steps(24, end) infinite alternate;
+        }
+
+        @keyframes typing {
+            0%, 100% {
+                width: 0;
+            }
+            50% {
+                width: 9.2ch; 
+            }
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <nav class="bg-black text-white py-2">
+        <div class="container mx-auto flex justify-between items-center pl-8">
+            <img class="w-12 md:w-20 animate-jump-in" src="./assets/girnar shilp logo.jpg" alt="Girnar Shilp Logo">
+            
+            <!-- Menu for large screens -->
+            <ul class="hidden md:flex gap-3">
+                <li class=" rounded-lg px-4 py-3 hover:animate-jump hover:bg-white hover:text-black cursor-pointer animate-jump-in animate-once animate-duration-[1500ms]"><a href="#welcome" ">Home</a></li>
+                <li class=" rounded-lg px-4 py-3 hover:animate-jump hover:bg-white hover:text-black cursor-pointer animate-jump-in animate-once animate-duration-[1500ms] animate-delay-1000"><a href="#aboutus" ">About Us</a></li>
+                <li class=" rounded-lg px-4 py-3 hover:animate-jump hover:bg-white hover:text-black cursor-pointer animate-jump-in animate-once animate-duration-[1500ms] animate-delay-[1300ms]"><a href="#services"">Services</a></li>
+                <li class=" rounded-lg px-4 py-3 hover:animate-jump hover:bg-white hover:text-black cursor-pointer animate-jump-in animate-once animate-duration-[1500ms] animate-delay-[1600ms]"><a href="#work"    ">Work</a></li>
+                <li class=" rounded-lg px-4 py-3 hover:animate-jump hover:bg-white hover:text-black cursor-pointer animate-jump-in animate-once animate-duration-[1500ms] animate-delay-[2000ms]"><a href="#contact" ">Contact</a></li>
+            </ul>
+            
+            <!-- Menu icon for small screens -->
+            <div class="flex justify-center items-center pr-2 gap-2">
+                <button class="border-2 border-orange-500 text-orange-500 hover:animate-jump hover:bg-white hover:text-black md:mr-8 px-4 py-3 rounded-md">login</button>
+                <input type="checkbox" id="menu-toggle" class="hidden md:hidden">
+                <label for="menu-toggle" class="md:hidden cursor-pointer">
+                    <i id="menu-icon" class="fa fa-navicon text-xl"></i>
+                    <i id="close-icon" class="fa fa-times text-xl"></i>
+                </label>
+            </div>
+
+            <!-- Menu for small screens -->
+            <div class="md:hidden absolute top-20 left-0 w-full bg-black text-center text-orange-300 p-4 space-y-4 transition-all duration-300 opacity-0 scale-0 transform origin-top" id="mobile-menu">
+                <a href="#welcome" class="block hover:text-black hover:bg-white hover:animate-jump p-4">Home</a>
+                <a href "#aboutus" class="block hover:text-black hover:bg-white hover:animate-jump p-4">About Us</a>
+                <a href "#services" class="block hover:text-black hover:bg-white hover:animate-jump p-4">Services</a>
+                <a href "#work" class="block hover:text-black hover:bg-white hover:animate-jump p-4">Work</a>
+                <a href "#contact" class="block hover:text-black hover:bg-white hover:animate-jump p-4">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div id="welcome" class=" w-full md:w-screen h-screen bg-[url(./assets/girnar-mobile.jpg)]  md:bg-[url(./assets/girnar.jpg)] bg-cover bg-fixed flex flex-col justify-center items-center">
+        <div class="relative -mt-32 text-6xl md:text-7xl md:ml-96 animate-fade-up animate-duration-1000" style="font-family: 'El Messiri', sans-serif;">
+            <h1 class="md:relative md:right-96 ">Welcome to</h1>
+            <div class="md:absolute typing-text text-orange-500 md:top-0">Girnar Shilp</div>
+        </div>
+        <p class="text-2xl font-mono tracking-wider animate-bounce animate-thrice animate-ease-in-out animate-normal animate-fill-both">Crafting Temples and Statues with Precision</p>
+    </div>
+
+    <div id="aboutus" class="w-full h-fit bg-orange-500 bg-fixed pt-16 flex flex-col justify-center items-center overflow-y-scroll  sticky top-0">
+        <div class="container mx-auto mt-8 overflow-y-scroll max-h-screen">
+            <div class="text-center mb-8">
+                <h1 class="text-4xl font-bold text-white " data-aos="flip-up">About Us</h1>
+            </div>
+            <div class="w-full">
+                <p class="text-white text-lg mb-8 " data-aos="zoom-out-left">
+                    Girnar Shilp is a family-owned business with a legacy of over 80 years in crafting exquisite marble masterpieces. Our commitment to excellence is deeply rooted in the passion and dedication of the Khetani family, with our founder, <span class="font-bold text-white">Arvindbhai Khetani</span>, and co-founder, <span class="font-bold text-white">Sureshbhai Khetani</span>. Today, <span class="font-bold text-white">Yash Khetani</span> leads as the CEO, carrying on our tradition of excellence.
+                </p>
+                <p class="text-white text-lg mb-8" data-aos="zoom-out-right" data-aos-duration="1000">
+                    What sets us apart is our relentless pursuit of precision and craftsmanship. We take immense pride in our ability to transform raw marble into stunning note planks, intricate temples, and lifelike statues that encapsulate our rich heritage and artistic expertise.
+                </p>
+                <p class="text-white text-lg mb-8">
+                    With eight decades of experience, we've achieved remarkable milestones and forged enduring partnerships with our clients. We're here to bring your dreams to life through our exquisite marble creations, each piece bearing the hallmark of Girnar Shilp's unmatched artistry.
+                </p>
+                <p class="text-white text-lg">
+                    Meet the talented individuals who make up the heart of Girnar Shilp. Our team is dedicated to providing you with unparalleled artistry and ensuring your complete satisfaction.
+                </p>
+            </div>
+            <div class="w-full p-8">
+                <h2 class="text-center text-3xl font-bold text-white mb-8">Our Team</h2>
+                <div class="flex flex-wrap justify-center items-center">
+                    <div class="w-full md:w-1/3 p-4">
+                        <img src="./assets/bhai.jpg" alt="Team Member 1" class="rounded-full mx-auto mb-4" style="max-width: 150px">
+                        <h3 class="text-center text-white text-lg mt-4">Yash Khetani</h3>
+                        <p class="text-center text-white font-bold">CEO</p>
+                    </div>
+                    <div class="w-full md:w-1/3 p-4">
+                        <img src="./assets/bhaiji.jpg" alt="Team Member 3" class="w-full rounded-full mx-auto mb-4" style="max-width: 150px">
+                        <h3 class="text-center text-white text-lg mt-4">Arvindbhai Khetani</h3>
+                        <p class="text-center text-white font-bold">Founder</p>
+                    </div>
+                    <div class="w-full md:w-1/3 p-4">
+                        <img src="./assets/papa.jpg" alt="Team Member 2" class="rounded-full mx-auto mb-4" style="max-width: 150px">
+                        <h3 class="text-center text-white text-lg mt-4">Sureshbhai Khetani</h3>
+                        <p class="text-center text-white font-bold">Co-Founder</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    <div id="services" class="bg-black text-white sticky top-0 w-screen h-screen py-5 bg-fixed">
+        <div class="container mx-auto overflow-y-scroll max-h-screen">
+            <h1 class="text-3xl text-center mb-8">Our Services</h1>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Service Card 1 -->
+                <div class="bg-orange-500 rounded-lg p-4 hover:bg-white hover:text-black hover:duration-500">
+                    <h2 class="text-xl font-semibold">Marble Statues</h2>
+                    <p class="mt-2">Elegant marble statues crafted with precision and attention to detail. Add beauty to your surroundings.</p>
+                    <ul class="mt-4 list-disc pl-4">
+                        <li>Handcrafted by skilled artisans</li>
+                        <li>Perfect for home and public spaces</li>
+                        <li>Various designs and sizes available</li>
+                    </ul>
+                </div>
+    
+                <!-- Service Card 2 -->
+                <div class="bg-orange-500 rounded-lg p-4 hover:bg-white hover:text-black hover:duration-500">
+                    <h2 class="text-xl font-semibold">Stone Nameplates</h2>
+                    <p class="mt-2">Personalize your space with custom stone nameplates. Choose from a variety of designs and materials.</p>
+                    <ul class="mt-4 list-disc pl-4">
+                        <li>Customizable with your name or text</li>
+                        <li>Available in marble, granite, and more</li>
+                        <li>Enhance the look of your property</li>
+                    </ul>
+                </div>
+    
+                <!-- Service Card 3 -->
+                <div class="bg-orange-500 rounded-lg p-4 hover:bg-white hover:text-black hover:duration-500">
+                    <h2 class="text-xl font-semibold">Marble Temples</h2>
+                    <p class="mt-2">Crafting beautiful marble temples that bring devotion and peace to your home. A blend of craftsmanship and spirituality.</p>
+                    <ul class="mt-4 list-disc pl-4">
+                        <li>Designed for a sense of spirituality</li>
+                        <li>Add serenity to your home's sacred space</li>
+                        <li>Meticulously crafted with devotion</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+
+    <div id="work" class="w-screen h-fit sticky top-0 bg-orange-500 pb-60 pt-10 z-10">
+       <div class="overflow-y-scroll max-h-screen">
+        <h1 class="text-center w-screen text-6xl pb-4 font-semibold font-mono tracking-widest uppercase text-white top-0">Work Showcase</h1>
+        <div class="grid grid-cols-1 mx-auto md:grid-cols-3 gap-3 ">
+            <div class="h-full space-y-3">
+                <div>
+                    <img class="rounded-md w-full" src="./assets/hanumanchalisa.jpg" alt="Work Image 1">
+                </div>
+                <div>
+                    <img class="rounded-md w-full" src="./assets/ganpati.jpg" alt="Work Image 2">
+                </div>
+                <div>
+                    <img class="rounded-md w-full" src="./assets/mandir.jpg" alt="Work Image 3">
+                </div>
+                <div>
+                    <img class="w-full rounded-md" src="./assets/ramdarbar.jpg" alt="Work Image 10">
+                </div>
+                <div>
+                    <img  class="w-full rounded-md" src="./assets/shivparivar.jpg" alt="Work Image 9">
+                </div>
+            </div>
+            <div class="h-full space-y-3">
+                <div>
+                    <img class="rounded-md w-full" src="./assets/radhakrishn.jpg" alt="Work Image 4">
+                </div>
+                <div>
+                    <img class="rounded-md w-full" src="./assets/mataji1.jpg" alt="Work Image 5">
+                </div>
+                <div>
+                    <img class="rounded-md w-full" src="./assets/mandir2.jpg" alt="Work Image 6">
+                </div>
+                <div>
+                    <img class="w-full rounded-md" src="./assets/statue.jpg" alt="Work Image 11">
+                </div>
+                <div>
+                    <img  class="w-full rounded-md" src="./assets/special mandir.jpg" alt="Work Image 9">
+                </div>
+            </div>
+            <div class="h-full space-y-3">
+                <div>
+                    <img class="h-full rounded-md" src="./assets/hanumanji.jpg" alt="Work Image 7">
+                </div>
+                <div>
+                    <img class="w-full rounded-md" src="./assets/chamundamataji.jpg" alt="Work Image 8">
+                </div>
+                <div>
+                    <img  class="w-full rounded-md" src="./assets/mandir3.jpg" alt="Work Image 9">
+                </div>
+                <div>
+                    <img  class="w-full rounded-md" src="./assets/takti.jpg" alt="Work Image 9">
+                </div>
+                <div>
+                    <img  class="w-full rounded-md" src="./assets/shivling.jpg" alt="Work Image 9">
+                </div>
+            </div>
+        </div>
+       </div>
+    </div>
+
+    <div id="contact" class="bg-black text-white h-screen sticky top-0 z-10 pt-10">
+        <div class="container mx-auto">
+            <h1 class="text-4xl mb-6">Get in Touch</h1>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <h2 class="text-2xl mb-4">Contact Information</h2>
+                    <ul>
+                        <li><i class="fa fa-envelope"></i> Email: contact@girnarshilp.com</li>
+                        <li><i class="fa fa-phone"></i> Phone: +1-123-456-7890</li>
+                        <li><i class="fa fa-map-marker-alt"></i> Address: 123 Main Street, City, Country</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="text-2xl mb-4">Send Us a Message</h2>
+                    <form>
+                        <div class="mb-4">
+                            <input type="text" placeholder="Your Name" class="w-full bg-orange-500 text-white p-2 border border-white" required>
+                        </div>
+                        <div class="mb-4">
+                            <input type="email" placeholder="Your Email" class="w-full bg-orange-500 text-white p-2 border border-white" required>
+                        </div>
+                        <div class="mb-4">
+                            <textarea placeholder="Your Message" rows="4" class="w-full bg-orange-500 text-white p-2 border border-white" required></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="bg-orange-500 text-white px-4 py-2 border border-white hover:bg-white hover:text-black transition duration-300">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const menuIcon = document.getElementById("menu-icon");
+        const closeIcon = document.getElementById("close-icon");
+
+        menuToggle.addEventListener("change", function() {
+            if (menuToggle.checked) {
+                mobileMenu.style.opacity = "1";
+                mobileMenu.style.transform = "scale(1)";
+                menuIcon.style.display = "none";
+                closeIcon.style.display = "block";
+            } else {
+                mobileMenu.style.opacity = "0";
+                mobileMenu.style.transform = "scale(0)";
+                menuIcon.style.display = "block";
+                closeIcon.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>
